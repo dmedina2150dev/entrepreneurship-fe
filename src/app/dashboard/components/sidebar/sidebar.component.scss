@@ -1,0 +1,13 @@
+.container-nav {
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.active {
+    background-color: khaki;
+}
