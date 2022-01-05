@@ -1,1 +1,23 @@
-<p>products works!</p>
+<section class="container-products">
+    <header>
+        <h2>Productos & Categorías</h2>
+    </header>
+
+    <div class="products--content">
+        <mat-tab-group mat-align-tabs="start">
+            <mat-tab label="Productos">
+                <app-list-product></app-list-product>
+            </mat-tab>
+            <mat-tab label="Categorías">
+                <app-list-category></app-list-category>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Nombre:</mat-label>
+        <input matInput placeholder="">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+</section>
