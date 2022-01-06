@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DialogCreateService } from '../../components/service/dialog-create.service';
+import { DialogCreateService } from './components/service/dialog-create.service';
 
 @Component({
   selector: 'app-products',

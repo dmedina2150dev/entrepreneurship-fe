@@ -5,7 +5,6 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { MenuComponent } from './menu/menu.component';
 import { SalesComponent } from './sales/sales.component';
 import { ShoppingComponent } from './shopping/shopping.component';
-import { UsersComponent } from './users/users.component';
 
 
 
@@ -13,7 +12,6 @@ import { UsersComponent } from './users/users.component';
   declarations: [
     InventoryComponent,
     SalesComponent,
-    UsersComponent,
     MenuComponent,
     ShoppingComponent,
   ],

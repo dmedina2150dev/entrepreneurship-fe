@@ -11,9 +11,20 @@
             <span>
                 <a [routerLink]="['/dashboard']"> Admin </a>
             </span>
-            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="icon menu user"
+                [matMenuTriggerFor]="menuUser">
                 <mat-icon>account_circle</mat-icon>
             </button>
+            <mat-menu #menuUser="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>person</mat-icon>
+                    <span>Perfil</span>
+                </button>
+                <button mat-menu-item [routerLink]="[ '/users' ]">
+                    <mat-icon>person_outline</mat-icon>
+                    <span>Cerrar sesión</span>
+                </button>
+            </mat-menu>
         </mat-toolbar>
 
         <section class="content">
