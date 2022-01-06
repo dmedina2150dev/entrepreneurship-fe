@@ -1,12 +1,15 @@
 <section class="container-list-product">
     <div class="list-product--add">
-        <button>ADD</button>
+        <button mat-button color="accent">
+            <mat-icon>add_circle_outline</mat-icon>
+            Añadir Categoría
+        </button>
     </div>
     <div class="list-product--registers">
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
             <ng-container matColumnDef="code">
-                <th mat-header-cell *matHeaderCellDef> CODIGO </th>
+                <th mat-header-cell *matHeaderCellDef> CÓDIGO </th>
                 <td mat-cell *matCellDef="let element"> {{element.code}} </td>
             </ng-container>
 
@@ -48,6 +51,33 @@
             <ng-container matColumnDef="performance">
                 <th mat-header-cell *matHeaderCellDef> RENDIMIENTO </th>
                 <td mat-cell *matCellDef="let element"> {{element.performance}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="option">
+                <th mat-header-cell *matHeaderCellDef> </th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu option for categories">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon>edit</mat-icon>
+                            <span>Editar</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                            <mat-icon>supervised_user_circle</mat-icon>
+                            <span>Añadir Proveedor</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                            <mat-icon>notifications_off</mat-icon>
+                            <span>Crear Alerta</span>
+                        </button>
+                        <button mat-menu-item>
+                            <mat-icon>delete</mat-icon>
+                            <span>Eliminar</span>
+                        </button>
+                    </mat-menu>
+                </td>
             </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

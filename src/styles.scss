@@ -6,3 +6,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 a {
     text-decoration: none;
 }
+
+tr,
+th.mat-header-cell  {
+    text-align: center!important;
+}

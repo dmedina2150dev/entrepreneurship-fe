@@ -21,7 +21,7 @@ const ELEMENT_DATA: Category[] = [
   styleUrls: ['./list-category.component.scss']
 })
 export class ListCategoryComponent implements OnInit {
-  displayedColumns: string[] = ['id','name', 'description'];
+  displayedColumns: string[] = ['id','name', 'description', 'option'];
   categories = ELEMENT_DATA;
 
   constructor() { }

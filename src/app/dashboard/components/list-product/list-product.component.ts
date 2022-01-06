@@ -24,7 +24,7 @@ const ELEMENT_DATA: Product[] = [
   styleUrls: ['./list-product.component.scss']
 })
 export class ListProductComponent implements OnInit {
-  displayedColumns: string[] = ['code','name', 'stock', 'description', 'category', 'unit', 'costUnit', 'costSale', 'performance'];
+  displayedColumns: string[] = ['code','name', 'stock', 'description', 'category', 'unit', 'costUnit', 'costSale', 'performance', 'option'];
   dataSource = ELEMENT_DATA;
 
   constructor() { }
