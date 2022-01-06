@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DialogCreateService } from '../../components/service/dialog-create.service';
 
 @Component({
   selector: 'app-products',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _dialogCreate: DialogCreateService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  createdProduct() {
+    this._dialogCreate.openDialogProduct();
   }
 
 }

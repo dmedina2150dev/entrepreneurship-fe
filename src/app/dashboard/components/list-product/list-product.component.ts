@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/core/models/products/product';
 import { Unit } from 'src/app/core/models/products/unidad';
+import { DialogCreateService } from '../service/dialog-create.service';
 
 
 
@@ -27,9 +28,15 @@ export class ListProductComponent implements OnInit {
   displayedColumns: string[] = ['code','name', 'stock', 'description', 'category', 'unit', 'costUnit', 'costSale', 'performance', 'option'];
   dataSource = ELEMENT_DATA;
 
-  constructor() { }
+  constructor(
+    private _dialogCreate: DialogCreateService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  createdProduct() {
+    this._dialogCreate.openDialogProduct();
   }
 
 }

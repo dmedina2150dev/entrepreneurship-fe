@@ -7,15 +7,15 @@
             <mat-step [stepControl]="personalData">
                 <form [formGroup]="personalData" class="form-register">
                     <ng-template matStepLabel>Datos Personales</ng-template>
-                    <mat-form-field appearance="fill">
+                    <mat-form-field appearance="outline">
                         <mat-label>Nombre:</mat-label>
                         <input matInput type="text" placeholder="Nombre completo" formControlName="fullName" required>
                     </mat-form-field>
-                    <mat-form-field appearance="fill">
+                    <mat-form-field appearance="outline">
                         <mat-label>Correo:</mat-label>
                         <input matInput type="email" placeholder="Email" formControlName="email" required>
                     </mat-form-field>
-                    <mat-form-field appearance="fill">
+                    <mat-form-field appearance="outline">
                         <mat-label>Contraseña:</mat-label>
                         <input matInput type="password" placeholder="Contraseña" formControlName="password" required>
                     </mat-form-field>
@@ -27,15 +27,15 @@
             <mat-step [stepControl]="businessData" label="Fill out your address">
                 <form [formGroup]="businessData" class="form-register">
                     <ng-template matStepLabel>Datos Empresa</ng-template>
-                    <mat-form-field appearance="fill">
+                    <mat-form-field appearance="outline">
                         <mat-label>Nombre Empresa:</mat-label>
                         <input matInput type="text" formControlName="nameBusiness" placeholder="Nombre de la empresa" required>
                     </mat-form-field>
-                    <mat-form-field appearance="fill">
+                    <mat-form-field appearance="outline">
                         <mat-label>Dirección:</mat-label>
                         <input matInput type="text" formControlName="address" placeholder="Dirección de la empresa" required>
                     </mat-form-field>
-                    <mat-form-field appearance="fill">
+                    <mat-form-field appearance="outline">
                         <mat-label>Telefóno:</mat-label>
                         <input matInput type="tel" formControlName="phone" placeholder="Número de contacto" required>
                     </mat-form-field>

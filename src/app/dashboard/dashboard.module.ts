@@ -8,8 +8,6 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { PagesDashModule } from './pages/pages-dash.module';
 
-
-
 @NgModule({
   declarations: [
     DashboardComponent,

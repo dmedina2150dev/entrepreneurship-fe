@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/core/models/products/category';
+import { DialogCreateService } from '../service/dialog-create.service';
 
 
 const ELEMENT_DATA: Category[] = [
@@ -24,9 +25,15 @@ export class ListCategoryComponent implements OnInit {
   displayedColumns: string[] = ['id','name', 'description', 'option'];
   categories = ELEMENT_DATA;
 
-  constructor() { }
+  constructor(
+    private _dialogCreate: DialogCreateService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  createdCategory() {
+    this._dialogCreate.openDialogCategory();
   }
 
 }
