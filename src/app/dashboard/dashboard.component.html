@@ -16,11 +16,11 @@
                 <mat-icon>account_circle</mat-icon>
             </button>
             <mat-menu #menuUser="matMenu">
-                <button mat-menu-item>
+                <button mat-menu-item [routerLink]="[ '/dashboard/users' ]">
                     <mat-icon>person</mat-icon>
                     <span>Perfil</span>
                 </button>
-                <button mat-menu-item [routerLink]="[ '/users' ]">
+                <button mat-menu-item [routerLink]="[ '/' ]" (click)="logOut()">
                     <mat-icon>person_outline</mat-icon>
                     <span>Cerrar sesión</span>
                 </button>

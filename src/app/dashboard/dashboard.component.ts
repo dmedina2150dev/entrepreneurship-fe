@@ -12,4 +12,9 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logOut() {
+    console.group("Dashboard Log");
+    console.log("Cerro Sesión");
+    console.groupEnd();
+  }
 }

@@ -11,12 +11,12 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     children: [
+      { path: 'products', loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule) },
+      { path: 'users', loadChildren: () => import('./pages/users/users.module').then(m => m.UsersModule) },
       { path: 'inventories', component: InventoryComponent },
       { path: 'sales', component: SalesComponent },
-      { path: 'products', loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule) },
       { path: 'menu', component: MenuComponent },
       { path: 'shoppings', component: ShoppingComponent },
-      { path: 'users', loadChildren: () => import('./pages/users/users.module').then(m => m.UsersModule) },
     ]
   }
 ];
