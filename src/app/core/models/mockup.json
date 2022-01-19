@@ -1,0 +1,99 @@
+{
+    "person": {
+        "id": 123,
+        "name": "Dajan Medina",
+        "email": "dm@mail.com",
+        "password": "*********",
+        "organizations": [
+            {
+                "id": 12,
+                "name": "Cook 2150",
+                "address": "Claro Solar 428",
+                "phone": 9477895431,
+                "invetories": [
+                    {
+                        "id": 1,
+                        "name": "Inventario cocina",
+                        "products": [
+                            {
+                                "id": 1,
+                                "code": "string",
+                                "name": "string",
+                                "stock": "number",
+                                "description": "string",
+                                "category": {"id": 1, "name": "Congelados", "description": "Blablablabla"},
+                                "unit": "Unit",
+                                "costUnit": "string",
+                                "costSale": "string",
+                                "performance": "number"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "name": "Inventario Salón",
+                        "products": [
+                            {
+                                "id": 1,
+                                "code": "string",
+                                "name": "string",
+                                "stock": "number",
+                                "description": "string",
+                                "category": {"id": 1, "name": "Congelados", "description": "Blablablabla"},
+                                "unit": "Unit",
+                                "costUnit": "string",
+                                "costSale": "string",
+                                "performance": "number"
+                            }
+                        ]
+                    }
+                ],
+                "recetas": [],
+                "products": [
+                    {
+                        "id": 1,
+                        "code": "string",
+                        "name": "string",
+                        "stock": "number",
+                        "description": "string",
+                        "category": {"id": 1, "name": "Congelados", "description": "Blablablabla"},
+                        "unit": "Unit",
+                        "costUnit": "string",
+                        "costSale": "string",
+                        "performance": "number"
+                    },
+                    {
+                        "id": 2,
+                        "code": "string",
+                        "name": "string",
+                        "stock": "number",
+                        "description": "string",
+                        "category": {"id": 1, "name": "Congelados", "description": "Blablablabla"},
+                        "unit": "Unit",
+                        "costUnit": "string",
+                        "costSale": "string",
+                        "performance": "number"
+                    }
+                ],
+                "categories": [
+                    {
+                        "id": 1,
+                        "name": "Congelados",
+                        "description": "Blablablabla"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Verduras",
+                        "description": "Blablablabla"
+                    }
+                ]
+            },
+            {
+                "id": 13,
+                "name": "Sandwinches 2150",
+                "address": "Claro Solar 428",
+                "phone": 9477895431
+            }
+        ]
+    }
+}
