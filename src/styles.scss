@@ -35,9 +35,71 @@ th.mat-header-cell  {
     cursor: pointer;
 }
 
+.btn {
+    border: 0;
+    width: 200px;
+    height: 40px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--btn-primary);
+    color: var(--text-color);
+}
+
+.btn-secundary {
+    background-color: var(--btn-secundary);
+    color: var(--text-color);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rest-wb {
+    width: 160px;
+}
+
 .form {
 
     .form-container-input {
         width: 100%;
     }
+}
+
+.container-form {
+    max-width: 600px;
+    width: 100%;
+    max-height: 450px;
+    height: 450px;
+    margin: 0 auto;
+
+    .header-card {
+        width: 100%;
+        margin: auto;
+
+        h3 {
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+    }
+
+    .container-form-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/*********** RESET STYLES *********/
+.mat-horizontal-content-container {
+    padding: 0!important;
 }

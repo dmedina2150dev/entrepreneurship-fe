@@ -1,34 +1,28 @@
 <section class="container-login">
-    <div class="login--form">
-        <mat-card class="container-form">
-            <header>
-                <h3>
-                    Iniciar sesión
-                </h3>
-                <p>Ingrese su ususario y contraseña</p>
-            </header>
-            <ng-container>
-                <form [formGroup]="loginForm" class="form">
-                    <mat-form-field appearance="outline" floatLabel="always" class="form-container-input">
-                        <mat-label>Correo</mat-label>
-                        <input matInput type="text" placeholder="mail@mail.com">
-                    </mat-form-field>
+    <mat-card class="container-form">
+        <header class="header-card">
+            <h3>
+                Iniciar sesión
+            </h3>
+            <p>Ingrese su ususario y contraseña</p>
+        </header>
+        <div class="container-form-content">
+            <form [formGroup]="loginForm" class="form">
+                <mat-form-field appearance="outline" floatLabel="always" class="form-container-input">
+                    <mat-label>Correo</mat-label>
+                    <input matInput type="text" placeholder="mail@mail.com">
+                </mat-form-field>
 
-                    <mat-form-field appearance="outline" floatLabel="always" class="form-container-input">
-                        <mat-label>Contraseña</mat-label>
-                        <input matInput [type]="hide ? 'password' : 'text'" placeholder="*********">
-                        <button mat-icon-button matSuffix
-                            (click)="hide = !hide"
-                            [attr.aria-label]="'Hide password'"
-                            [attr.aria-pressed]="hide"
-                            class="btn-icon">
-                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                        </button>
-                    </mat-form-field>
-                </form>
-            </ng-container>
-            <button mat-button class="btn btn-primary">Iniciar Sesión</button>
-            <p>¿No tienes tu cuenta? creala <a [routerLink]="[ '/register' ]">aquí</a></p>
-        </mat-card>
-    </div>
+                <mat-form-field appearance="outline" floatLabel="always" class="form-container-input">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" placeholder="*********">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide" class="btn-icon">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            </form>
+        </div>
+        <button mat-button class="btn btn-primary">Iniciar Sesión</button>
+    </mat-card>
 </section>

@@ -1,60 +1,68 @@
 <section class="container-register">
-    <mat-card>
+    <mat-card class="container-form">
         <!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
             {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
         </button> -->
-        <mat-stepper [linear]="isLinear" #stepper>
-            <mat-step [stepControl]="personalData">
-                <form [formGroup]="personalData" class="form-register">
-                    <ng-template matStepLabel>Datos Personales</ng-template>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Nombre:</mat-label>
-                        <input matInput type="text" placeholder="Nombre completo" formControlName="fullName" required>
-                    </mat-form-field>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Correo:</mat-label>
-                        <input matInput type="email" placeholder="Email" formControlName="email" required>
-                    </mat-form-field>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Contraseña:</mat-label>
-                        <input matInput type="password" placeholder="Contraseña" formControlName="password" required>
-                    </mat-form-field>
-                    <div>
-                        <button mat-button matStepperNext>Siguiente</button>
+        <header class="header-card">
+            <h3>
+                Registrarse
+            </h3>
+        </header>
+        <div class="container-form-content">
+            <mat-stepper [linear]="isLinear" #stepper>
+                <mat-step [stepControl]="personalData">
+                    <form [formGroup]="personalData" class="form-register">
+                        <ng-template matStepLabel>Datos Personales</ng-template>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Nombre:</mat-label>
+                            <input matInput type="text" placeholder="Nombre completo" formControlName="fullName" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Correo:</mat-label>
+                            <input matInput type="email" placeholder="Email" formControlName="email" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Contraseña:</mat-label>
+                            <input matInput type="password" placeholder="Contraseña" formControlName="password" required>
+                        </mat-form-field>
+                        <div>
+                            <button mat-button matStepperNext class="btn btn-secundary">Siguiente</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="businessData" label="Fill out your address">
+                    <form [formGroup]="businessData" class="form-register">
+                        <ng-template matStepLabel>Datos Empresa</ng-template>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Nombre Empresa:</mat-label>
+                            <input matInput type="text" formControlName="nameBusiness" placeholder="Nombre de la empresa"
+                                required>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Dirección:</mat-label>
+                            <input matInput type="text" formControlName="address" placeholder="Dirección de la empresa"
+                                required>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Telefóno:</mat-label>
+                            <input matInput type="tel" formControlName="phone" placeholder="Número de contacto" required>
+                        </mat-form-field>
+                        <div class="btn-container">
+                            <button mat-button matStepperPrevious class="btn btn-secundary">Regresar</button>
+                            <button mat-button matStepperNext class="btn btn-secundary">Siguiente</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel>Listo</ng-template>
+                    <p>You are now done.</p>
+                    <div class="btn-container">
+                        <button mat-button matStepperPrevious class="btn btn-secundary rest-wb">Regresar</button>
+                        <button mat-button class="btn btn-secundary rest-wb" (click)="stepper.reset()">Resetear</button>
+                        <button mat-button class="btn btn-secundary rest-wb" (click)="save()">Registrar</button>
                     </div>
-                </form>
-            </mat-step>
-            <mat-step [stepControl]="businessData" label="Fill out your address">
-                <form [formGroup]="businessData" class="form-register">
-                    <ng-template matStepLabel>Datos Empresa</ng-template>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Nombre Empresa:</mat-label>
-                        <input matInput type="text" formControlName="nameBusiness" placeholder="Nombre de la empresa" required>
-                    </mat-form-field>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Dirección:</mat-label>
-                        <input matInput type="text" formControlName="address" placeholder="Dirección de la empresa" required>
-                    </mat-form-field>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Telefóno:</mat-label>
-                        <input matInput type="tel" formControlName="phone" placeholder="Número de contacto" required>
-                    </mat-form-field>
-                    <div>
-                        <button mat-button matStepperPrevious>Regresar</button>
-                        <button mat-button matStepperNext>Siguiente</button>
-                    </div>
-                </form>
-            </mat-step>
-            <mat-step>
-                <ng-template matStepLabel>Listo</ng-template>
-                <p>You are now done.</p>
-                <div>
-                    <button mat-button matStepperPrevious>Regresar</button>
-                    <button mat-button (click)="stepper.reset()">Resetear</button>
-                    <button mat-button (click)="save()">Registrar</button>
-                </div>
-            </mat-step>
-        </mat-stepper>
-        <a [routerLink]="[ '/login' ]">Login</a>
+                </mat-step>
+            </mat-stepper>
+        </div>
     </mat-card>
 </section>
