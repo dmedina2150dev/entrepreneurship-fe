@@ -1,16 +1,21 @@
-<main class="container-home">
-    <section class="home-section">
-        <a
-            [routerLink]="['/register']"
-            routerLinkActive="active" >
-            Registro
-        </a>
+<section class="home">
+    <header class="herader--home">
+        <h3>Kanrisha Resutoran</h3>
+        <p>El lugar donde podras administrar tu negocio de comida</p>
+    </header>
+    
+    <section class="container-home">
+        <div class="home-section">
+            <!-- <a [routerLink]="['/register']">
+                Registro
+            </a> -->
+            <app-register></app-register>
+        </div>
+        <div class="home-section">
+            <!-- <a [routerLink]="['/login']">
+                Login
+            </a> -->
+            <app-login></app-login>
+        </div>
     </section>
-    <section class="home-section">
-        <a
-            [routerLink]="['/login']"
-            routerLinkActive="active" >
-            Login
-        </a>
-    </section>
-</main>
+</section>
