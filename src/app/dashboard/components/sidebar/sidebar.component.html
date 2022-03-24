@@ -1,34 +1,72 @@
 <section class="container-nav">
-    <nav>
-        <a
-            [routerLink]="['/dashboard/inventories']"
-            routerLinkActive="active" >
-            Inventarios
-        </a>
-        <a
-            [routerLink]="['/dashboard/products']"
-            routerLinkActive="active">
-            Productos
-        </a>
-        <a
-            [routerLink]="['/dashboard/menu']"
-            routerLinkActive="active">
-            Menu
-        </a>
-        <a
-            [routerLink]="['/dashboard/sales']"
-            routerLinkActive="active"
-            >Ventas
-        </a>
-        <a
-            [routerLink]="['/dashboard/shoppings']"
-            routerLinkActive="active">
-            Compras
-        </a>
-        <a
-            [routerLink]="['/dashboard/users']"
-            routerLinkActive="active"
-            >Usuarios
-        </a>
-    </nav>
+	<div class="nav-img">
+		<img src="https://picsum.photos/100/100" alt="">
+	</div>
+	<nav>
+		<a
+		class="nav-a"
+		[routerLink]="['/dashboard/inventories']"
+		routerLinkActive="active"
+		#tooltip="matTooltip"
+		matTooltip="Inventarios"
+		matTooltipPosition="right"
+		>
+		<mat-icon class="icon-nav">assignment</mat-icon>
+		</a>
+		<a
+		class="nav-a"
+		[routerLink]="['/dashboard/products']"
+		routerLinkActive="active"
+		#tooltip="matTooltip"
+		matTooltip="Productos"
+		matTooltipPosition="right"
+		>
+		<mat-icon class="icon-nav">shopping_cart</mat-icon>
+		</a>
+		<a
+		class="nav-a"
+		[routerLink]="['/dashboard/menu']"
+		routerLinkActive="active"
+		#tooltip="matTooltip"
+		matTooltip="Menu"
+		matTooltipPosition="right"
+		>
+		<mat-icon class="icon-nav"> restaurant_menu</mat-icon>
+		</a>
+		<a
+		class="nav-a"
+		[routerLink]="['/dashboard/sales']"
+		routerLinkActive="active"
+		#tooltip="matTooltip"
+		matTooltip="Ventas"
+		matTooltipPosition="right"
+		>
+		<mat-icon class="icon-nav">room_service</mat-icon>
+		</a>
+		<a
+		class="nav-a"
+		[routerLink]="['/dashboard/shoppings']"
+		routerLinkActive="active"
+		#tooltip="matTooltip"
+		matTooltip="Compras"
+		matTooltipPosition="right"
+		>
+		<mat-icon class="icon-nav">add_shopping_cart</mat-icon>
+		</a>
+		<a
+		class="nav-a"
+		[routerLink]="['/dashboard/users']"
+		routerLinkActive="active"
+		#tooltip="matTooltip"
+		matTooltip="Usuarios"
+		matTooltipPosition="right"
+		matTooltipHideDelay="100000"
+		>
+		<mat-icon class="icon-nav">supervisor_account</mat-icon>
+		</a>
+	</nav>
+
+	<button >
+		<mat-icon class="icon-nav">exit_to_app</mat-icon>
+	</button>
 </section>

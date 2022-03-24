@@ -1,16 +1,21 @@
 .container {
     height: 100vh;
+    background: var(--primary);
 }
 .sidenav-header {
     max-width: 200px;
     width: 100%;
     height: inherit;
+    background: var(--primary);
+    margin: auto;
+    // box-shadow: 3px 0px 8px 1px  rgba(0, 0, 0, 0.1);
 }
 
 .navbar-dashboard {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--primary);
 }
 
 .content {
