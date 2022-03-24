@@ -47,6 +47,19 @@
             opacity: 0.5;
         }
     }
+
+    .btn-close {
+        border: 0;
+        background-color: transparent;
+        color: var(--text-color);
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+
+        :hover {
+            transform: scale(1.1);
+        }
+    }
 }
 
 .active {
