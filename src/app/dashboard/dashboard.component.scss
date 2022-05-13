@@ -1,6 +1,7 @@
 .container {
     height: 100vh;
     background: var(--primary);
+    color: var(--text-color);
 }
 .sidenav-header {
     max-width: 200px;
@@ -8,7 +9,6 @@
     height: inherit;
     background: var(--primary);
     margin: auto;
-    // box-shadow: 3px 0px 8px 1px  rgba(0, 0, 0, 0.1);
 }
 
 .navbar-dashboard {
